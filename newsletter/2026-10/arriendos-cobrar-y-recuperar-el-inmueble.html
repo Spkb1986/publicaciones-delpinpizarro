@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arriendos: cobrar y recuperar el inmueble</title>
+<meta name="description" content="Newsletter N° 1 del Estudio Delpin Pizarro &amp; Cía.: lo que hoy exige la Ley N° 18.101 para cobrar rentas y recuperar el inmueble arrendado. Borrador sin revisión editorial.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&display=swap">
+<style>
+  /* Pieza completa del newsletter: una columna de lectura de 680 px, tipografía de marca, paleta del manual.
+     Claro: crema #FCFAF0 · verde oscuro #4B5B4E · gris verdoso #CDCEC2 · gris azulado #494E58.
+     Oscuro: verde profundo de fondo con texto crema; mismos pares de contraste del brandbook. */
+  :root {
+    --bg: #FCFAF0; --fg: #4B5B4E; --muted: #494E58; --rule: #CDCEC2; --panel: #CDCEC2; --panel-fg: #4B5B4E;
+    --accent: #4B5B4E; --accent-fg: #FCFAF0; --banner-bg: #494E58; --banner-fg: #FCFAF0;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Roboto Flex', Arial, Helvetica, sans-serif;
+    --logo-claro: inline; --logo-oscuro: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+      --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+      --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+    --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+    --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+  }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 18px; line-height: 1.6; }
+  .banner { background: var(--banner-bg); color: var(--banner-fg); font-size: 13px; line-height: 1.4; text-align: center; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pagina { max-width: 680px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cabecera img { display: block; width: 190px; max-width: 100%; height: auto; }
+  .logo-claro { display: var(--logo-claro); }
+  .logo-oscuro { display: var(--logo-oscuro); }
+  .rotulo { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .eyebrow { margin: 36px 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  .bajada { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 32em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .meta span { white-space: nowrap; }
+  figure { margin: 0 0 32px; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cuerpo { max-width: 36em; }
+  .cuerpo p { margin: 0 0 18px; }
+  h2 { font-weight: 600; font-size: 18px; line-height: 1.3; margin: 30px 0 8px; }
+  .lectura { background: var(--panel); color: var(--panel-fg); padding: 18px 22px; margin: 24px 0; }
+  .lectura .rotulo { color: var(--panel-fg); margin-bottom: 8px; }
+  .lectura p { margin: 0 0 12px; }
+  .lectura p:last-child { margin: 0; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; border-left: 2px solid var(--rule); padding-left: 16px; margin: 22px 0; }
+  ol, ul { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  .proyectos { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .proyectos li { margin: 0; padding: 12px 14px; border: 1px solid var(--rule); }
+  .proyectos b { display: block; font-weight: 600; }
+  .proyectos span { font-size: 15px; color: var(--muted); }
+  .fuentes { font-size: 15px; color: var(--muted); }
+  .fuentes li { margin-bottom: 6px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .autor { display: flex; align-items: center; gap: 16px; margin: 36px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .iniciales { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--panel); color: var(--panel-fg); font-family: var(--serif); font-size: 20px; display: grid; place-items: center; }
+  .autor p { margin: 0; font-size: 15px; color: var(--muted); }
+  .autor b { color: var(--fg); font-weight: 600; }
+  .pie { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .pie p { margin: 0 0 8px; }
+  @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+</style>
+</head>
+<body>
+
+<div class="banner">Borrador sin revisión editorial · Newsletter N° 1 · no difundir</div>
+
+<main class="pagina">
+
+  <header class="cabecera">
+    <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
+      <img class="logo-claro" src="../../assets/logo_principal_verde.png" alt="Delpin Pizarro &amp; Cía." width="190">
+      <img class="logo-oscuro" src="../../assets/logo_principal_crema.png" alt="Delpin Pizarro &amp; Cía." width="190">
+    </a>
+    <p class="rotulo">Newsletter N° 1 · 26 de octubre de 2026</p>
+  </header>
+
+  <p class="rotulo eyebrow">Arrendamiento · Ley N° 18.101</p>
+  <h1>Arriendos: lo que hoy exige la ley para cobrar y recuperar el inmueble</h1>
+  <p class="bajada">Cuatro años después de la Ley N° 21.461, los tribunales aún discuten qué contrato basta para el monitorio. Qué dice la ley y qué conviene hacer.</p>
+  <p class="meta"><span>Sebastián Pizarro Klein, socio</span><span>26 de octubre de 2026</span><span>Cinco minutos de lectura</span></p>
+
+  <figure>
+    <img src="../../assets/foto_arriendos.jpg" alt="Cordillera nevada sobre un río turquesa, fotografía del Estudio" width="1040" height="585">
+  </figure>
+
+  <div class="cuerpo">
+    <h2>Qué pasó</h2>
+    <p>El 30 de junio de 2022 se publicó la Ley N° 21.461, conocida como «Devuélveme mi casa». Modificó la Ley N° 18.101 sobre arrendamiento de predios urbanos y es su última reforma: el texto vigente en LeyChile no registra cambios posteriores.</p>
+    <p>La reforma hizo tres cosas. Creó un procedimiento monitorio para cobrar rentas, gastos comunes y consumos, con restitución del inmueble (artículos 18-A a 18-K). Permitió la restitución anticipada cuando el arrendatario destruye o inutiliza el inmueble (artículo 8 N° 7 bis). Y dispuso que, en los contratos escritos, las firmas se autoricen ante notario, quien debe pedir los títulos del arrendador (artículo 20).</p>
+    <p>En el monitorio, el juez revisa la demanda y, si la admite, requiere al arrendatario para que pague en diez días corridos. Si no paga ni se opone, queda condenado y el lanzamiento se fija en un plazo no superior a diez días desde que la resolución queda firme. Si se opone con fundamento, el monitorio termina y la discusión pasa a un juicio declarativo limitado a lo que el arrendatario alegó y ofreció probar.</p>
+
+    <h2>Por qué importa</h2>
+    <p>El punto que más se ha litigado es el artículo 20. Algunos juzgados civiles leyeron la autorización notarial como requisito para usar el monitorio y declararon inadmisibles demandas con contratos sin notario. La Corte de Apelaciones de Santiago corrigió esa lectura dos veces por recurso de queja.</p>
+    <blockquote>El contrato ante notario es «un antecedente de suficiencia para el ejercicio de la acción pero no un requisito de admisibilidad».</blockquote>
+    <p>Así lo dijo la Corte en sentencia de 5 de junio de 2024 (Segunda Sala, rol Civil 16.788-2023). En ese caso bastó un contrato firmado con firma electrónica avanzada, más la inscripción de dominio del arrendador. En sentencia de 23 de septiembre de 2024 (Tercera Sala, rol Civil 5.187-2024), admitió una demanda sin contrato escrito, apoyada en facturas, cartolas bancarias y declaraciones juradas, porque el artículo 18-A solo exige acompañar «todos los antecedentes que le sirvan de fundamento».</p>
+    <p>Esto significa que el arrendador sin contrato notarial puede usar el monitorio, pero arriesga que el juzgado le declare inadmisible la demanda y tener que ir en queja, con el tiempo que eso cuesta.</p>
+    <p>La otra pieza es la oposición del arrendatario. La Corte Suprema (Primera Sala) ha fijado el estándar en dos fallos de 2024 sobre precario, al que la ley extiende el monitorio. El 16 de mayo (rol 65.024-2023) dijo que no puede desestimarse una oposición solo porque el título invocado no conste por escrito, si el demandado explica su defensa y ofrece testigos. El 22 de abril (rol 134.410-2023) confirmó el rechazo de una oposición que no invocaba título alguno y se apoyaba en certificados desactualizados.</p>
+
+    <div class="lectura">
+      <p class="rotulo">Nuestra lectura</p>
+      <p>El monitorio funciona cuando el expediente se arma desde la firma del contrato. La autorización notarial no es un requisito, pero evita discutir la admisibilidad, y eso vale más que su costo.</p>
+      <p>Para el arrendatario, la oposición es la única oportunidad: lo que no acompañe u ofrezca en esos diez días no podrá traerlo después.</p>
+    </div>
+
+    <h2>Qué hacer</h2>
+    <ol>
+      <li><b>Firmar el contrato ante notario o con firma electrónica avanzada</b>, y guardar copia de la inscripción de dominio vigente o del título que habilita al arrendador para arrendar.</li>
+      <li><b>Si no hay contrato escrito, ordenar los comprobantes de pago.</b> La ley presume que la renta es la que consta en depósitos de al menos tres meses consecutivos.</li>
+      <li><b>Antes de demandar, reunir las liquidaciones de gastos comunes y las cuentas de consumo</b>, porque el monitorio permite cobrarlas junto con las rentas.</li>
+      <li><b>Si usted es el arrendatario demandado</b>, oponerse dentro de los diez días corridos con todos los documentos y la lista de testigos. La oposición fija lo que se podrá discutir después.</li>
+      <li><b>Si arrienda por piezas o habitaciones</b>, revisar que el inmueble cumpla los estándares de la Ordenanza General de Urbanismo y Construcciones: el Título V de la Ley N° 18.101 sanciona el arriendo abusivo con multas de 5 a 100 UTM ante el juzgado de policía local.</li>
+    </ol>
+
+    <h2>Qué sigue</h2>
+    <p>Hay tres proyectos que modifican la ley, todos en primer trámite y sin urgencia al 25 de octubre de 2026. Ninguno cambia hoy las reglas descritas.</p>
+    <ul class="proyectos">
+      <li><b>Perfecciona el monitorio para las acciones de restitución</b><span>Boletín N° 18.110-07 · Senado, Comisión de Constitución · ingresó el 4 de marzo de 2026</span></li>
+      <li><b>Prohíbe arrendar a extranjeros en situación migratoria irregular</b><span>Boletín N° 17.716-07 · Cámara, Comisión de Constitución · ingresó el 21 de julio de 2025</span></li>
+      <li><b>Excluye la unidad de fomento como mecanismo de reajuste en los contratos que señala</b><span>Boletín N° 18.340-03 · Senado, Comisión de Economía · ingresó el 10 de junio de 2026</span></li>
+    </ul>
+
+    <h2>Fuentes</h2>
+    <ul class="fuentes">
+      <li><a href="https://www.bcn.cl/leychile/navegar?idNorma=29526">Ley N° 18.101, texto vigente</a> (última modificación: Ley N° 21.461), LeyChile, consultada el 25 de octubre de 2026.</li>
+      <li><a href="https://www.bcn.cl/leychile/navegar?idNorma=1178004">Ley N° 21.461</a>, LeyChile, consultada el 25 de octubre de 2026.</li>
+      <li>Corte de Apelaciones de Santiago (Segunda Sala), 5 de junio de 2024, rol Civil 16.788-2023.</li>
+      <li>Corte de Apelaciones de Santiago (Tercera Sala), 23 de septiembre de 2024, rol Civil 5.187-2024.</li>
+      <li>Corte Suprema (Primera Sala), 16 de mayo de 2024, rol 65.024-2023.</li>
+      <li>Corte Suprema (Primera Sala), 22 de abril de 2024, rol 134.410-2023.</li>
+      <li>Senado, fichas de tramitación de los Boletines <a href="https://tramitacion.senado.cl/appsenado/templates/tramitacion/index.php?boletin_ini=18110-07">N° 18.110-07</a>, <a href="https://tramitacion.senado.cl/appsenado/templates/tramitacion/index.php?boletin_ini=17716-07">N° 17.716-07</a> y <a href="https://tramitacion.senado.cl/appsenado/templates/tramitacion/index.php?boletin_ini=18340-03">N° 18.340-03</a>, consultadas el 25 de octubre de 2026.</li>
+    </ul>
+  </div>
+
+  <div class="autor">
+    <div class="iniciales" aria-hidden="true">SP</div>
+    <p><b>Sebastián Pizarro Klein</b> · Socio<br>sebastian@delpinpizarro.cl · Tel. +56 2 2954 0314</p>
+  </div>
+
+  <footer class="pie">
+    <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · delpinpizarro.cl</p>
+    <p>Este contenido es informativo y no constituye asesoría legal. Las normas y los criterios jurisprudenciales que se citan pueden cambiar; verifique la versión vigente antes de tomar una decisión. Si su situación requiere análisis particular, consulte con un abogado. © Delpin Pizarro &amp; Cía.</p>
+  </footer>
+
+</main>
+</body>
+</html>
