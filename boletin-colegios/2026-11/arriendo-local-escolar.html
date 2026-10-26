@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arriendo del local escolar</title>
+<meta name="description" content="Boletín para colegios N° 1 del Estudio Delpin Pizarro &amp; Cía.: plazos y reglas del arriendo del inmueble escolar en colegios subvencionados y el proyecto de ley en tercer trámite. Borrador sin revisión editorial.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&display=swap">
+<style>
+  /* Pieza completa del newsletter: una columna de lectura de 680 px, tipografía de marca, paleta del manual.
+     Claro: crema #FCFAF0 · verde oscuro #4B5B4E · gris verdoso #CDCEC2 · gris azulado #494E58.
+     Oscuro: verde profundo de fondo con texto crema; mismos pares de contraste del brandbook. */
+  :root {
+    --bg: #FCFAF0; --fg: #4B5B4E; --muted: #494E58; --rule: #CDCEC2; --panel: #CDCEC2; --panel-fg: #4B5B4E;
+    --accent: #4B5B4E; --accent-fg: #FCFAF0; --banner-bg: #494E58; --banner-fg: #FCFAF0;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Roboto Flex', Arial, Helvetica, sans-serif;
+    --logo-claro: inline; --logo-oscuro: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+      --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+      --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+    --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+    --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+  }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 18px; line-height: 1.6; }
+  .banner { background: var(--banner-bg); color: var(--banner-fg); font-size: 13px; line-height: 1.4; text-align: center; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pagina { max-width: 680px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cabecera img { display: block; width: 190px; max-width: 100%; height: auto; }
+  .logo-claro { display: var(--logo-claro); }
+  .logo-oscuro { display: var(--logo-oscuro); }
+  .rotulo { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .eyebrow { margin: 36px 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  .bajada { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 32em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .meta span { white-space: nowrap; }
+  figure { margin: 0 0 32px; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cuerpo { max-width: 36em; }
+  .cuerpo p { margin: 0 0 18px; }
+  h2 { font-weight: 600; font-size: 18px; line-height: 1.3; margin: 30px 0 8px; }
+  .lectura { background: var(--panel); color: var(--panel-fg); padding: 18px 22px; margin: 24px 0; }
+  .lectura .rotulo { color: var(--panel-fg); margin-bottom: 8px; }
+  .lectura p { margin: 0 0 12px; }
+  .lectura p:last-child { margin: 0; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; border-left: 2px solid var(--rule); padding-left: 16px; margin: 22px 0; }
+  ol, ul { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  .proyectos { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .proyectos li { margin: 0; padding: 12px 14px; border: 1px solid var(--rule); }
+  .proyectos b { display: block; font-weight: 600; }
+  .proyectos span { font-size: 15px; color: var(--muted); }
+  .fuentes { font-size: 15px; color: var(--muted); }
+  .fuentes li { margin-bottom: 6px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .autor { display: flex; align-items: center; gap: 16px; margin: 36px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .iniciales { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--panel); color: var(--panel-fg); font-family: var(--serif); font-size: 20px; display: grid; place-items: center; }
+  .autor p { margin: 0; font-size: 15px; color: var(--muted); }
+  .autor b { color: var(--fg); font-weight: 600; }
+  .pie { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .pie p { margin: 0 0 8px; }
+  @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+  .plazos { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .plazos caption { text-align: left; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+  .plazos th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 8px 10px 8px 0; }
+  .plazos td { border-bottom: 1px solid var(--rule); padding: 10px 10px 10px 0; vertical-align: top; }
+  .plazos td b { font-weight: 600; }
+  .nota-tabla { font-size: 14px; color: var(--muted); }
+  .reglas { padding-left: 20px; }
+</style>
+</head>
+<body>
+<div class="banner">Borrador sin revisión editorial · Boletín para colegios N° 1 · no difundir</div>
+
+<main class="pagina">
+
+  <header class="cabecera">
+    <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
+      <img class="logo-claro" src="../../assets/logo_principal_verde.png" alt="Delpin Pizarro &amp; Cía." width="190">
+      <img class="logo-oscuro" src="../../assets/logo_principal_crema.png" alt="Delpin Pizarro &amp; Cía." width="190">
+    </a>
+    <p class="rotulo">Boletín para colegios · N° 1 · Noviembre 2026</p>
+  </header>
+
+  <p class="rotulo eyebrow">Tema del mes · Infraestructura escolar</p>
+  <h1>Colegios que arriendan su local: plazos, reglas y lo que viene</h1>
+  <p class="bajada">El plazo para comprar el inmueble vence en junio de 2027 para parte de los sostenedores, y el Senado tiene en discusión inmediata un proyecto que lo extiende.</p>
+  <p class="meta"><span>Sebastián Pizarro Klein, socio</span><span>Noviembre de 2026</span><span>Cinco minutos de lectura</span></p>
+
+  <figure>
+    <img src="../../assets/foto_arriendo_local.jpg" alt="Cordillera nevada sobre un río turquesa, fotografía del Estudio" width="1040" height="585">
+  </figure>
+
+  <div class="cuerpo">
+    <h2>Qué pasó</h2>
+    <p>El 21 de octubre de 2026 el Gobierno hizo presente la urgencia de discusión inmediata para el proyecto que facilita la creación de nuevos establecimientos educacionales (Boletín N° 16.743-04). Está en tercer trámite: el Senado debe pronunciarse sobre los cambios que le hizo la Cámara de Diputados.</p>
+    <p>Para los colegios que arriendan su local, el proyecto hace dos cosas. Extiende el plazo para adquirir el inmueble, de 2027 a 2032 y de 2031 a 2036, según el caso. Y permite que cualquier sostenedor, también los nuevos, funcione en un local arrendado a terceros, con reglas fijas.</p>
+    <p>En paralelo, la Corte Suprema (Tercera Sala), en sentencia de 20 de julio de 2026 (rol 52.741-2025), confirmó una sanción de la Superintendencia de Educación a un colegio de Alto Hospicio. La razón: modificó la renta de su arriendo con anexos privados, sin escritura pública ni inscripción, y su contrato no tenía la cláusula de renovación que exige la ley.</p>
+
+    <h2>Por qué importa</h2>
+    <p>Hoy, la regla general para recibir subvención es que el sostenedor sea dueño del inmueble, libre de gravámenes, o lo use en comodato (artículo 6, letra a) quáter, de la Ley de Subvenciones). El arriendo se admite solo como excepción, en el artículo cuarto transitorio de la Ley N° 20.845, y la Superintendencia lo interpretó en su Dictamen N° 66, de 19 de junio de 2023.</p>
+
+    <table class="plazos">
+      <caption>Plazos para adquirir el inmueble</caption>
+      <thead><tr><th scope="col">Sostenedor constituido sin fines de lucro</th><th scope="col">Ley vigente</th><th scope="col">Proyecto</th></tr></thead>
+      <tbody>
+        <tr><td>Después del 30 de junio de 2017</td><td><b>30 jun. 2027</b></td><td>30 jun. 2032</td></tr>
+        <tr><td>Antes del 1 de julio de 2017</td><td><b>30 jun. 2031</b></td><td>30 jun. 2036</td></tr>
+      </tbody>
+    </table>
+    <p class="nota-tabla">Ley vigente: artículo 55 de la Ley N° 21.526. Proyecto: artículo 4° del Boletín N° 16.743-04, ya aprobado por ambas cámaras, pendiente el fin de su tramitación.</p>
+
+    <ul class="reglas">
+      <li><b>Arriendo a una persona relacionada con el sostenedor.</b> Solo hasta el plazo para comprar el inmueble, según la tabla.</li>
+      <li><b>Arriendo a un tercero no relacionado.</b> Puede mantenerse en forma permanente si el contrato está inscrito en el Conservador, dura al menos ocho años con renovación automática, el arrendador solo puede no renovar avisando con cuatro años de anticipación, la renta no supera el 11 % del avalúo fiscal dividido en doce y las mejoras son de cargo del dueño. Una renta mayor requiere tasación y autorización previa de la Superintendencia.</li>
+      <li><b>Colegios reconocidos después del 1 de marzo de 2016</b> que piden subvención por primera vez. Según el dictamen, no pueden arrendar: deben ser dueños o comodatarios.</li>
+    </ul>
+
+    <p>A eso se suma la regla del reconocimiento oficial: el contrato debe constar por escritura pública, estar inscrito y acreditar su renovación seis meses antes de vencer (artículo 46, letra i), de la Ley General de Educación, y artículo 16 del Decreto N° 315). La Corte Suprema dijo que los anexos que cambian la renta forman parte del contrato y deben cumplir las mismas solemnidades. No hacerlo es una infracción grave; en ese caso, la sanción fue la pérdida del 3 % de la subvención por un mes.</p>
+    <p>Según se expuso en la Comisión de Educación del Senado, solo el 5,3 % de los establecimientos pudo adquirir su inmueble entre 2017 y 2023.</p>
+
+    <div class="lectura">
+      <p class="rotulo">Nuestra lectura</p>
+      <p>El proyecto alivia el plazo, pero no cambia el fondo: el arriendo a personas relacionadas sigue teniendo fecha de término, ahora 2032 o 2036, y el arriendo a terceros exige el mismo contrato riguroso de hoy. Mientras el proyecto no sea ley, el plazo vigente es junio de 2027.</p>
+      <p>El fallo de julio muestra dónde se están sancionando los arriendos: no en la renta, sino en la forma.</p>
+    </div>
+
+    <h2>Qué hacer en el colegio</h2>
+    <ol>
+      <li><b>Confirmar la fecha en que el sostenedor se constituyó como persona jurídica sin fines de lucro</b>, porque define si su plazo vence en 2027 o en 2031.</li>
+      <li><b>Verificar si el arrendador es una persona relacionada</b> con el sostenedor, sus directivos o sus fundadores. Si lo es, el arriendo tiene fecha de término.</li>
+      <li><b>Revisar el contrato vigente:</b> escritura pública, inscripción en el Conservador, duración de ocho años con renovación automática, cláusula expresa de aviso de no renovación, renta dentro del 11 % del avalúo y cláusula de mejoras de cargo del dueño.</li>
+      <li><b>Otorgar por escritura pública e inscribir todo anexo</b> que cambie la renta, el plazo o el inmueble.</li>
+      <li><b>Si la renta supera el 11 % del avalúo</b>, pedir la autorización de la Superintendencia con tasación antes de pagar el canon mayor.</li>
+    </ol>
+
+    <h2>Qué sigue</h2>
+    <p>La Comisión de Educación del Senado, en informe de 11 de agosto de 2026, propuso aprobar casi todos los cambios de la Cámara y rechazar uno: la eliminación de la regla que pone las mejoras a cargo del dueño. Si la Sala rechaza alguna modificación, el proyecto pasa a comisión mixta. Por tener normas de rango orgánico constitucional, deberá pasar además por el Tribunal Constitucional antes de publicarse. Cuando eso ocurra, saldrá una alerta con el texto final.</p>
+
+    <h2>Fuentes</h2>
+    <ul class="fuentes">
+      <li><a href="https://bcn.cl/VkB7hd">Decreto con Fuerza de Ley N° 2, de 1998, Ley de Subvenciones</a>, artículo 6, letra a) quáter. LeyChile, consultado el 26 de octubre de 2026.</li>
+      <li><a href="https://bcn.cl/2ffcn">Ley N° 20.845, de Inclusión Escolar</a>, artículos tercero y cuarto transitorios. LeyChile, consultada el 26 de octubre de 2026.</li>
+      <li><a href="https://www.bcn.cl/leychile/navegar?idNorma=1187103&amp;idParte=10391825">Ley N° 21.526, artículo 55</a>. LeyChile, consultada el 26 de octubre de 2026.</li>
+      <li>Superintendencia de Educación, Dictamen N° 66, de 19 de junio de 2023.</li>
+      <li>Corte Suprema (Tercera Sala), 20 de julio de 2026, rol 52.741-2025.</li>
+      <li><a href="https://tramitacion.senado.cl/appsenado/templates/tramitacion/index.php?boletin_ini=16743-04">Senado, Boletín N° 16.743-04</a>: oficio de la Cámara N° 21.367, de 7 de julio de 2026, e informe de la Comisión de Educación de 11 de agosto de 2026. Estado consultado el 26 de octubre de 2026.</li>
+    </ul>
+  </div>
+
+  <div class="autor">
+    <div class="iniciales" aria-hidden="true">SP</div>
+    <p><b>Sebastián Pizarro Klein</b> · Socio<br>sebastian@delpinpizarro.cl · Tel. +56 2 2954 0314</p>
+  </div>
+
+  <footer class="pie">
+    <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · delpinpizarro.cl</p>
+    <p>Este contenido es informativo y no constituye asesoría legal. Las normas y los criterios jurisprudenciales que se citan pueden cambiar; verifique la versión vigente antes de tomar una decisión. Si su situación requiere análisis particular, consulte con un abogado. © Delpin Pizarro &amp; Cía.</p>
+  </footer>
+
+</main>
+</body>
+</html>

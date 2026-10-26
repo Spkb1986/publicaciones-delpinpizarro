@@ -4,7 +4,6 @@ Sitio estático que sirve las piezas completas de los boletines del Estudio en `
 
 - `index.html`: índice de piezas.
 - `boletin-colegios/AAAA-MM/<slug>.html`: una página por pieza del Boletín para colegios.
-- `newsletter/AAAA-MM/<slug>.html`: una página por pieza del newsletter semanal.
 - `plantillas/pieza.html`: plantilla de la pieza completa (una columna, marca, claro y oscuro).
 - `assets/`: logotipos y fotografías del kit.
 - `CNAME`: dominio personalizado.
