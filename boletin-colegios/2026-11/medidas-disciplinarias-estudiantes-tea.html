@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Medidas disciplinarias respecto de estudiantes autistas</title>
+<meta name="description" content="Boletín para colegios N° 1 · Un estudiante autista puede recibir una medida disciplinaria. Lo que la ley exige es cuidar cómo se aplica.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&display=swap">
+<style>
+  /* Pieza completa del newsletter: una columna de lectura de 680 px, tipografía de marca, paleta del manual.
+     Claro: crema #FCFAF0 · verde oscuro #4B5B4E · gris verdoso #CDCEC2 · gris azulado #494E58.
+     Oscuro: verde profundo de fondo con texto crema; mismos pares de contraste del brandbook. */
+  :root {
+    --bg: #FCFAF0; --fg: #4B5B4E; --muted: #494E58; --rule: #CDCEC2; --panel: #CDCEC2; --panel-fg: #4B5B4E;
+    --accent: #4B5B4E; --accent-fg: #FCFAF0; --banner-bg: #494E58; --banner-fg: #FCFAF0;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Roboto Flex', Arial, Helvetica, sans-serif;
+    --logo-claro: inline; --logo-oscuro: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+      --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+      --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+    --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+    --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+  }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 18px; line-height: 1.6; }
+  .banner { background: var(--banner-bg); color: var(--banner-fg); font-size: 13px; line-height: 1.4; text-align: center; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pagina { max-width: 680px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cabecera img { display: block; width: 190px; max-width: 100%; height: auto; }
+  .logo-claro { display: var(--logo-claro); }
+  .logo-oscuro { display: var(--logo-oscuro); }
+  .rotulo { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .eyebrow { margin: 36px 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  .bajada { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 32em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .meta span { white-space: nowrap; }
+  figure { margin: 0 0 32px; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cuerpo { max-width: 36em; }
+  .cuerpo p { margin: 0 0 18px; }
+  h2 { font-weight: 600; font-size: 18px; line-height: 1.3; margin: 30px 0 8px; }
+  .lectura { background: var(--panel); color: var(--panel-fg); padding: 18px 22px; margin: 24px 0; }
+  .lectura .rotulo { color: var(--panel-fg); margin-bottom: 8px; }
+  .lectura p { margin: 0 0 12px; }
+  .lectura p:last-child { margin: 0; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; border-left: 2px solid var(--rule); padding-left: 16px; margin: 22px 0; }
+  ol, ul { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  .proyectos { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .proyectos li { margin: 0; padding: 12px 14px; border: 1px solid var(--rule); }
+  .proyectos b { display: block; font-weight: 600; }
+  .proyectos span { font-size: 15px; color: var(--muted); }
+  .fuentes { font-size: 15px; color: var(--muted); }
+  .fuentes li { margin-bottom: 6px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .autor { display: flex; align-items: center; gap: 16px; margin: 36px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .iniciales { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--panel); color: var(--panel-fg); font-family: var(--serif); font-size: 20px; display: grid; place-items: center; }
+  .autor p { margin: 0; font-size: 15px; color: var(--muted); }
+  .autor b { color: var(--fg); font-weight: 600; }
+  .pie { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .pie p { margin: 0 0 8px; }
+  @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+  .plazos { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .plazos caption { text-align: left; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+  .plazos th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 8px 10px 8px 0; }
+  .plazos td { border-bottom: 1px solid var(--rule); padding: 10px 10px 10px 0; vertical-align: top; }
+  .plazos td b { font-weight: 600; }
+  .nota-tabla { font-size: 14px; color: var(--muted); }
+  .reglas { padding-left: 20px; }
+
+  .tambien { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .tambien ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
+  .tambien li { margin: 0; }
+  .tambien a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .tambien .titulo { font-weight: 600; display: block; }
+  .tambien .linea { font-size: 15px; color: var(--muted); }
+  .puntos li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="banner">Borrador sin revisión editorial · Boletín para colegios N° 1 · no difundir</div>
+
+<main class="pagina">
+
+  <header class="cabecera">
+    <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
+      <img class="logo-claro" src="../../assets/logo_principal_verde.png" alt="Delpin Pizarro &amp; Cía." width="190">
+      <img class="logo-oscuro" src="../../assets/logo_principal_crema.png" alt="Delpin Pizarro &amp; Cía." width="190">
+    </a>
+    <p class="rotulo">Boletín para colegios · N° 1 · Noviembre 2026</p>
+  </header>
+
+  <p class="rotulo eyebrow">Convivencia escolar</p>
+  <h1>Medidas disciplinarias respecto de estudiantes autistas</h1>
+  <p class="bajada">Un estudiante autista puede recibir una medida disciplinaria. Lo que la ley exige es cuidar cómo se aplica.</p>
+  <p class="meta"><span>Bastián Vera Pardo, abogado</span><span>Noviembre de 2026</span><span>Dos minutos de lectura</span></p>
+
+  <figure>
+    <img src="../../assets/foto_nota_tea.jpg" alt="Araucaria al atardecer, fotografía del Estudio" width="1040" height="585">
+  </figure>
+
+  <div class="cuerpo">
+    <p>Una duda frecuente en los colegios es si un estudiante autista puede recibir una medida disciplinaria. La respuesta es sí: la Ley TEA (Ley N° 21.545) no lo exime de respetar las normas de convivencia. Lo importante es cómo se aplica la sanción.</p>
+    <p>Ningún estudiante puede ser sancionado por su condición. Por eso, la medida debe responder a una conducta que el Reglamento Interno describe como falta, y no a una desregulación propia del diagnóstico. Además, el colegio debe preferir las medidas formativas y considerar el contexto de cada estudiante y su Plan de Acompañamiento Emocional y Conductual (PAEC).</p>
+    <p>Si no se cumplen estas reglas, el riesgo para el establecimiento es real. En 2025, la Corte Suprema confirmó una multa de 51 UTM a una escuela de Ñuñoa que redujo la jornada y suspendió por dos días a un estudiante con TEA, ya que ninguna de esas medidas estaba en su reglamento.</p>
+
+    <h2>Puntos clave</h2>
+    <ul class="puntos">
+      <li>Un estudiante con TEA sí puede ser sancionado si comete una falta.</li>
+      <li>Solo se pueden aplicar medidas señaladas en el Reglamento Interno.</li>
+      <li>La sanción nunca puede basarse en una desregulación.</li>
+      <li>Primero se deben preferir las medidas formativas, y la sanción debe ser proporcional.</li>
+    </ul>
+
+    <h2>Fuentes</h2>
+    <ul class="fuentes">
+      <li><a href="https://www.bcn.cl/leychile/navegar?idNorma=1190123">Ley N° 21.545, que establece la promoción de la inclusión, la atención integral y la protección de los derechos de las personas con trastorno del espectro autista</a>. LeyChile.</li>
+      <li>Corte Suprema, 2025, multa de 51 UTM a una escuela de Ñuñoa [rol y fecha por confirmar]. Reseña en <a href="https://www.diarioconstitucional.cl/2025/10/25/corte-suprema-confirma-multa-a-colegio-por-medidas-disciplinarias-irregulares-contra-estudiante-con-tea/">Diario Constitucional, 25 de octubre de 2025</a>.</li>
+    </ul>
+  </div>
+
+  <div class="autor">
+    <div class="iniciales" aria-hidden="true">BV</div>
+    <p><b>Bastián Vera Pardo</b> · Abogado<br>bastian@delpinpizarro.cl · Tel. +56 2 2954 0314</p>
+  </div>
+
+  <section class="tambien" aria-label="También en este número">
+    <p class="rotulo">También en este número</p>
+    <ul>
+      <li><a href="arriendo-local-escolar.html"><span class="titulo">Colegios que arriendan su local: plazos, reglas y lo que viene</span></a><span class="linea">Infraestructura escolar · El plazo para comprar el inmueble vence en junio de 2027 para parte de los sostenedores.</span></li>
+      <li><a href="ley-40-horas-colegios.html"><span class="titulo">Ley de 40 horas en colegios: a quién se aplica la rebaja</span></a><span class="linea">Laboral · En los particulares pagados rige la rebaja; en los subvencionados se mantienen las 44 horas.</span></li>
+      <li><a href="pme-rendicion-sep.html"><span class="titulo">Un buen PME, una buena rendición SEP</span></a><span class="linea">Subvenciones · Si la acción del plan es vaga, el gasto cuesta de rendir y arriesga ser rechazado.</span></li>
+    </ul>
+  </section>
+
+  <footer class="pie">
+    <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · delpinpizarro.cl</p>
+    <p>Este contenido es informativo y no constituye asesoría legal. Las normas y los criterios jurisprudenciales que se citan pueden cambiar; verifique la versión vigente antes de tomar una decisión. Si su situación requiere análisis particular, consulte con un abogado. © Delpin Pizarro &amp; Cía.</p>
+  </footer>
+
+</main>
+</body>
+</html>
