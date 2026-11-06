@@ -83,6 +83,15 @@
   .pie p { margin: 0 0 8px; }
   @media (prefers-reduced-motion: no-preference) { .volver { transition: opacity .15s ease; } .volver:hover { opacity: .88; } }
   @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+
+  .migas { margin: 0 0 14px; font-size: 14px; }
+  .migas a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; }
+  .migas a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .boton-volver { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.2; padding: 13px 20px; }
+  .boton-volver:hover { opacity: .9; }
+  .boton-volver:focus-visible, .migas a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 480px) { .boton-volver { display: flex; justify-content: center; } }
 </style>
 </head>
 <body>
@@ -90,6 +99,8 @@
 <div class="banner">Pieza de prueba del formato · los textos son ilustrativos y no están verificados · no difundir</div>
 
 <main class="pagina">
+
+  <nav class="migas" aria-label="Navegación"><a href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Publicaciones del Estudio</a></nav>
 
   <header class="cabecera">
     <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
@@ -151,6 +162,10 @@
     </ul>
     <a class="volver" href="#">Lista de auditoría del reglamento interno (PDF)</a>
   </section>
+
+  <nav class="volver-publicaciones" aria-label="Volver">
+    <a class="boton-volver" href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Volver a las publicaciones</a>
+  </nav>
 
   <footer class="pie">
     <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · delpinpizarro.cl</p>

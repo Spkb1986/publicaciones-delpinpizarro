@@ -88,12 +88,23 @@
   .tambien .titulo { font-weight: 600; display: block; }
   .tambien .linea { font-size: 15px; color: var(--muted); }
   .puntos li { margin-bottom: 6px; }
+
+  .migas { margin: 0 0 14px; font-size: 14px; }
+  .migas a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; }
+  .migas a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .boton-volver { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.2; padding: 13px 20px; }
+  .boton-volver:hover { opacity: .9; }
+  .boton-volver:focus-visible, .migas a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 480px) { .boton-volver { display: flex; justify-content: center; } }
 </style>
 </head>
 <body>
 <div class="banner">Borrador sin revisión editorial · Boletín para colegios N° 1 · no difundir</div>
 
 <main class="pagina">
+
+  <nav class="migas" aria-label="Navegación"><a href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Publicaciones del Estudio</a></nav>
 
   <header class="cabecera">
     <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
@@ -145,6 +156,10 @@
       <li><a href="pme-rendicion-sep.html"><span class="titulo">Un buen PME, una buena rendición SEP</span></a><span class="linea">Subvenciones · Si la acción del plan es vaga, el gasto cuesta de rendir y arriesga ser rechazado.</span></li>
     </ul>
   </section>
+
+  <nav class="volver-publicaciones" aria-label="Volver">
+    <a class="boton-volver" href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Volver a las publicaciones</a>
+  </nav>
 
   <footer class="pie">
     <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · delpinpizarro.cl</p>
