@@ -2,31 +2,149 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Publicaciones · Delpin Pizarro &amp; Cía.</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600&display=swap">
+<meta name="description" content="Publicaciones del Estudio Delpin Pizarro &amp; Cía.: el Boletín para colegios y otras piezas.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&display=swap">
 <style>
-  :root { --bg:#FCFAF0; --fg:#4B5B4E; --muted:#494E58; --rule:#CDCEC2; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#2F3A33; --fg:#FCFAF0; --muted:#CDCEC2; --rule:#4B5B4E; color-scheme: dark; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:'Roboto Flex', Arial, sans-serif; font-size:18px; line-height:1.6; }
-  main { max-width:680px; margin:0 auto; padding:40px 16px 60px; }
-  h1 { font-family:'PT Serif', Georgia, serif; font-weight:400; font-size:34px; margin:0 0 6px; }
-  .rotulo { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 28px; }
-  ul { list-style:none; padding:0; margin:0; }
-  li { padding:16px 0; border-top:1px solid var(--rule); }
-  li a { color:inherit; font-weight:600; text-decoration:underline; text-underline-offset:2px; }
-  li span { display:block; font-size:15px; color:var(--muted); }
-  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--rule); font-size:13px; color:var(--muted); }
+  /* Pieza completa del newsletter: una columna de lectura de 680 px, tipografía de marca, paleta del manual.
+     Claro: crema #FCFAF0 · verde oscuro #4B5B4E · gris verdoso #CDCEC2 · gris azulado #494E58.
+     Oscuro: verde profundo de fondo con texto crema; mismos pares de contraste del brandbook. */
+  :root {
+    --bg: #FCFAF0; --fg: #4B5B4E; --muted: #494E58; --rule: #CDCEC2; --panel: #CDCEC2; --panel-fg: #4B5B4E;
+    --accent: #4B5B4E; --accent-fg: #FCFAF0; --banner-bg: #494E58; --banner-fg: #FCFAF0;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Roboto Flex', Arial, Helvetica, sans-serif;
+    --logo-claro: inline; --logo-oscuro: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+      --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+      --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+    --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+    --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+  }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 18px; line-height: 1.6; }
+  .banner { background: var(--banner-bg); color: var(--banner-fg); font-size: 13px; line-height: 1.4; text-align: center; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pagina { max-width: 680px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cabecera img { display: block; width: 190px; max-width: 100%; height: auto; }
+  .cabecera img.logo-claro { display: var(--logo-claro); }
+  .cabecera img.logo-oscuro { display: var(--logo-oscuro); }
+  .rotulo { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .eyebrow { margin: 36px 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  .bajada { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 32em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .meta span { white-space: nowrap; }
+  figure { margin: 0 0 32px; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cuerpo { max-width: 36em; }
+  .cuerpo p { margin: 0 0 18px; }
+  h2 { font-weight: 600; font-size: 18px; line-height: 1.3; margin: 30px 0 8px; }
+  .lectura { background: var(--panel); color: var(--panel-fg); padding: 18px 22px; margin: 24px 0; }
+  .lectura .rotulo { color: var(--panel-fg); margin-bottom: 8px; }
+  .lectura p { margin: 0 0 12px; }
+  .lectura p:last-child { margin: 0; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; border-left: 2px solid var(--rule); padding-left: 16px; margin: 22px 0; }
+  ol, ul { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  .proyectos { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .proyectos li { margin: 0; padding: 12px 14px; border: 1px solid var(--rule); }
+  .proyectos b { display: block; font-weight: 600; }
+  .proyectos span { font-size: 15px; color: var(--muted); }
+  .fuentes { font-size: 15px; color: var(--muted); }
+  .fuentes li { margin-bottom: 6px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .autor { display: flex; align-items: center; gap: 16px; margin: 36px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .iniciales { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--panel); color: var(--panel-fg); font-family: var(--serif); font-size: 20px; display: grid; place-items: center; }
+  .autor p { margin: 0; font-size: 15px; color: var(--muted); }
+  .autor b { color: var(--fg); font-weight: 600; }
+  .pie { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .pie p { margin: 0 0 8px; }
+  @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+  .plazos { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .plazos caption { text-align: left; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+  .plazos th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 8px 10px 8px 0; }
+  .plazos td { border-bottom: 1px solid var(--rule); padding: 10px 10px 10px 0; vertical-align: top; }
+  .plazos td b { font-weight: 600; }
+  .nota-tabla { font-size: 14px; color: var(--muted); }
+  .reglas { padding-left: 20px; }
+
+  .tambien { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .tambien ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
+  .tambien li { margin: 0; }
+  .tambien a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .tambien .titulo { font-weight: 600; display: block; }
+  .tambien .linea { font-size: 15px; color: var(--muted); }
+  .puntos li { margin-bottom: 6px; }
+
+  .migas { margin: 0 0 14px; font-size: 14px; }
+  .migas a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; }
+  .migas a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .boton-volver { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.2; padding: 13px 20px; }
+  .boton-volver:hover { opacity: .9; }
+  .boton-volver:focus-visible, .migas a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 480px) { .boton-volver { display: flex; justify-content: center; } }
+
+  .publicacion { margin-top: 36px; }
+  .publicacion > .rotulo { margin-bottom: 14px; }
+  .numero { display: grid; grid-template-columns: 220px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--rule); }
+  .numero img { width: 220px; height: auto; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+  .numero h2 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0 0 6px; }
+  .numero h2 a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .numero .fecha { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+  .numero ul { list-style: none; padding: 0; margin: 0 0 12px; font-size: 15px; }
+  .numero ul li { margin: 0 0 6px; }
+  .numero .ver { font-weight: 600; font-size: 15px; }
+  @media (max-width: 560px) { .numero { grid-template-columns: 1fr; } .numero img { width: 100%; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Publicaciones</h1>
-  <p class="rotulo">Delpin Pizarro &amp; Cía. · Estudio Jurídico</p>
-  <ul>
-    <li><a href="boletin-colegios/2026-11/ley-21809-reglamento-interno.html">Ley N° 21.809: qué queda vigente para el reglamento interno</a><span>Boletín para colegios · N° 1 · Noviembre 2026 · pieza de prueba del formato</span></li>
-  </ul>
-  <footer>Delpin Pizarro &amp; Cía. · Badajoz 130, oficina 1103, Las Condes · delpinpizarro.cl</footer>
+<main class="pagina">
+
+  <header class="cabecera">
+    <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
+      <img class="logo-claro" src="assets/logo_principal_verde.png" alt="Delpin Pizarro &amp; Cía." width="190">
+      <img class="logo-oscuro" src="assets/logo_principal_crema.png" alt="Delpin Pizarro &amp; Cía." width="190">
+    </a>
+    <p class="rotulo">Publicaciones del Estudio</p>
+  </header>
+
+  <h1 style="margin-top:32px;">Publicaciones</h1>
+
+  <section class="publicacion" aria-label="Boletín para colegios">
+    <p class="rotulo">Boletín para colegios</p>
+    <article class="numero">
+      <a href="boletin-colegios/2026-11/" aria-hidden="true" tabindex="-1"><img src="assets/ilus_arriendo_local.jpg" alt="" width="220" height="124"></a>
+      <div>
+        <h2><a href="boletin-colegios/2026-11/">N° 1 · Noviembre de 2026</a></h2>
+        <p class="fecha">Cinco artículos</p>
+        <ul>
+          <li><a href="boletin-colegios/2026-11/arriendo-local-escolar.html">Más plazo para comprar el inmueble y más flexibilidad para arrendar</a></li>
+          <li><a href="boletin-colegios/2026-11/medidas-disciplinarias-estudiantes-tea.html">Medidas disciplinarias respecto de estudiantes autistas</a></li>
+          <li><a href="boletin-colegios/2026-11/ley-40-horas-colegios.html">Ley de 40 horas en colegios: a quién se aplica la rebaja</a></li>
+          <li><a href="boletin-colegios/2026-11/pme-rendicion-sep.html">Un buen PME, una buena rendición SEP</a></li>
+          <li><a href="boletin-colegios/2026-11/procedimiento-sancionatorio-superintendencia.html">Cargos de la Superintendencia: el caso se juega antes de los descargos</a></li>
+        </ul>
+        <a class="ver" href="boletin-colegios/2026-11/">Ver el número completo →</a>
+      </div>
+    </article>
+  </section>
+
+  <footer class="pie">
+    <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · <a href="https://delpinpizarro.cl">delpinpizarro.cl</a></p>
+  </footer>
+
 </main>
 </body>
 </html>

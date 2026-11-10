@@ -92,7 +92,7 @@
   .migas { margin: 0 0 14px; font-size: 14px; }
   .migas a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; }
   .migas a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
-  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 12px; }
   .boton-volver { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.2; padding: 13px 20px; }
   .boton-volver:hover { opacity: .9; }
   .boton-volver:focus-visible, .migas a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -104,7 +104,7 @@
 
 <main class="pagina">
 
-  <nav class="migas" aria-label="Navegación"><a href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Publicaciones del Estudio</a></nav>
+  <nav class="migas" aria-label="Navegación"><a href="./"><span aria-hidden="true">←</span> Boletín para colegios N° 1</a></nav>
 
   <header class="cabecera">
     <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
@@ -159,6 +159,7 @@
   </section>
 
   <nav class="volver-publicaciones" aria-label="Volver">
+    <a class="boton-volver" href="./"><span aria-hidden="true">←</span> Ver todo el Boletín N° 1</a>
     <a class="boton-volver" href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Volver a las publicaciones</a>
   </nav>
 

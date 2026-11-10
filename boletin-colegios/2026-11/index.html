@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boletín para colegios N° 1</title>
+<meta name="description" content="Boletín para colegios N° 1 del Estudio Delpin Pizarro &amp; Cía., noviembre de 2026: los cinco artículos del número.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&display=swap">
+<style>
+  /* Pieza completa del newsletter: una columna de lectura de 680 px, tipografía de marca, paleta del manual.
+     Claro: crema #FCFAF0 · verde oscuro #4B5B4E · gris verdoso #CDCEC2 · gris azulado #494E58.
+     Oscuro: verde profundo de fondo con texto crema; mismos pares de contraste del brandbook. */
+  :root {
+    --bg: #FCFAF0; --fg: #4B5B4E; --muted: #494E58; --rule: #CDCEC2; --panel: #CDCEC2; --panel-fg: #4B5B4E;
+    --accent: #4B5B4E; --accent-fg: #FCFAF0; --banner-bg: #494E58; --banner-fg: #FCFAF0;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Roboto Flex', Arial, Helvetica, sans-serif;
+    --logo-claro: inline; --logo-oscuro: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+      --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+      --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2F3A33; --fg: #FCFAF0; --muted: #CDCEC2; --rule: #4B5B4E; --panel: #3C4A40; --panel-fg: #FCFAF0;
+    --accent: #CDCEC2; --accent-fg: #2F3A33; --banner-bg: #CDCEC2; --banner-fg: #2F3A33;
+    --logo-claro: none; --logo-oscuro: inline; color-scheme: dark;
+  }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 18px; line-height: 1.6; }
+  .banner { background: var(--banner-bg); color: var(--banner-fg); font-size: 13px; line-height: 1.4; text-align: center; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pagina { max-width: 680px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .cabecera img { display: block; width: 190px; max-width: 100%; height: auto; }
+  .cabecera img.logo-claro { display: var(--logo-claro); }
+  .cabecera img.logo-oscuro { display: var(--logo-oscuro); }
+  .rotulo { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .eyebrow { margin: 36px 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  .bajada { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 32em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .meta span { white-space: nowrap; }
+  figure { margin: 0 0 32px; }
+  figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cuerpo { max-width: 36em; }
+  .cuerpo p { margin: 0 0 18px; }
+  h2 { font-weight: 600; font-size: 18px; line-height: 1.3; margin: 30px 0 8px; }
+  .lectura { background: var(--panel); color: var(--panel-fg); padding: 18px 22px; margin: 24px 0; }
+  .lectura .rotulo { color: var(--panel-fg); margin-bottom: 8px; }
+  .lectura p { margin: 0 0 12px; }
+  .lectura p:last-child { margin: 0; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.45; border-left: 2px solid var(--rule); padding-left: 16px; margin: 22px 0; }
+  ol, ul { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  .proyectos { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .proyectos li { margin: 0; padding: 12px 14px; border: 1px solid var(--rule); }
+  .proyectos b { display: block; font-weight: 600; }
+  .proyectos span { font-size: 15px; color: var(--muted); }
+  .fuentes { font-size: 15px; color: var(--muted); }
+  .fuentes li { margin-bottom: 6px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .autor { display: flex; align-items: center; gap: 16px; margin: 36px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .iniciales { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--panel); color: var(--panel-fg); font-family: var(--serif); font-size: 20px; display: grid; place-items: center; }
+  .autor p { margin: 0; font-size: 15px; color: var(--muted); }
+  .autor b { color: var(--fg); font-weight: 600; }
+  .pie { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .pie p { margin: 0 0 8px; }
+  @media (max-width: 480px) { body { font-size: 17px; } .bajada { font-size: 19px; } .cabecera img { width: 160px; } }
+  .plazos { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .plazos caption { text-align: left; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+  .plazos th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 8px 10px 8px 0; }
+  .plazos td { border-bottom: 1px solid var(--rule); padding: 10px 10px 10px 0; vertical-align: top; }
+  .plazos td b { font-weight: 600; }
+  .nota-tabla { font-size: 14px; color: var(--muted); }
+  .reglas { padding-left: 20px; }
+
+  .tambien { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .tambien ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
+  .tambien li { margin: 0; }
+  .tambien a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .tambien .titulo { font-weight: 600; display: block; }
+  .tambien .linea { font-size: 15px; color: var(--muted); }
+  .puntos li { margin-bottom: 6px; }
+
+  .migas { margin: 0 0 14px; font-size: 14px; }
+  .migas a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; }
+  .migas a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+  .volver-publicaciones { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .boton-volver { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.2; padding: 13px 20px; }
+  .boton-volver:hover { opacity: .9; }
+  .boton-volver:focus-visible, .migas a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 480px) { .boton-volver { display: flex; justify-content: center; } }
+
+  .numero-intro { font-size: 17px; color: var(--muted); margin: 0 0 28px; max-width: 34em; }
+  .principal { display: block; color: inherit; text-decoration: none; margin: 0 0 8px; }
+  .principal figure { margin: 0 0 16px; }
+  .principal h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 4vw, 30px); line-height: 1.2; margin: 6px 0 8px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-wrap: balance; }
+  .principal p { margin: 0 0 6px; }
+  .principal .autoria { font-size: 14px; color: var(--muted); }
+  .principal:hover h2 { text-decoration-thickness: 2px; }
+  .notas { list-style: none; padding: 0; margin: 16px 0 0; }
+  .notas li { margin: 0; border-top: 1px solid var(--rule); }
+  .notas a { display: grid; grid-template-columns: 88px 1fr; gap: 16px; align-items: start; padding: 18px 0; color: inherit; text-decoration: none; }
+  .notas img { width: 88px; height: 88px; object-fit: cover; display: block; }
+  .notas .titulo { font-weight: 600; font-size: 18px; line-height: 1.3; display: block; margin: 4px 0 4px; text-decoration: underline; text-underline-offset: 2px; }
+  .notas .linea { font-size: 15px; color: var(--muted); display: block; }
+  .notas .autoria { font-size: 13px; color: var(--muted); display: block; margin-top: 4px; }
+  .notas a:hover .titulo { text-decoration-thickness: 2px; }
+  .seccion { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  @media (max-width: 480px) { .notas a { grid-template-columns: 64px 1fr; gap: 12px; } .notas img { width: 64px; height: 64px; } }
+</style>
+</head>
+<body>
+<div class="banner">Borrador sin revisión editorial · Boletín para colegios N° 1 · no difundir</div>
+
+<main class="pagina">
+
+  <nav class="migas" aria-label="Navegación"><a href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Publicaciones del Estudio</a></nav>
+
+  <header class="cabecera">
+    <a href="https://delpinpizarro.cl" aria-label="Delpin Pizarro &amp; Cía.">
+      <img class="logo-claro" src="../../assets/logo_principal_verde.png" alt="Delpin Pizarro &amp; Cía." width="190">
+      <img class="logo-oscuro" src="../../assets/logo_principal_crema.png" alt="Delpin Pizarro &amp; Cía." width="190">
+    </a>
+    <p class="rotulo">Boletín para colegios · N° 1 · Noviembre 2026</p>
+  </header>
+
+  <p class="rotulo eyebrow">Boletín para colegios</p>
+  <h1>N° 1 · Noviembre de 2026</h1>
+  <p class="numero-intro">José Miguel Delpin, socio a cargo del área de Gestión Legal Educacional, con lo que cambió este mes para los colegios. Para conversar cómo aplica a su establecimiento, <a href="mailto:josemiguel@delpinpizarro.cl">escríbanos</a>.</p>
+
+  <a class="principal" href="arriendo-local-escolar.html">
+    <figure><img src="../../assets/ilus_arriendo_local.jpg" alt="Ilustración: la silueta de un colegio de un piso, una llave grande y el plano del edificio, en acuarela verde y crema" width="1040" height="585"></figure>
+    <span class="rotulo">Tema del mes · Infraestructura escolar</span>
+    <h2>Más plazo para comprar el inmueble y más flexibilidad para arrendar</h2>
+    <p>Un proyecto con discusión inmediata extiende el plazo para comprar el inmueble, que vence en 2027, permite arrendar con más flexibilidad y facilita abrir colegios.</p>
+    <p class="autoria">Sebastián Pizarro Klein, socio</p>
+  </a>
+
+  <section class="seccion" aria-label="También en este número">
+    <p class="rotulo">También en este número</p>
+    <ul class="notas">
+      <li><a href="medidas-disciplinarias-estudiantes-tea.html"><img src="../../assets/ilus_medidas_tea_cuadro.jpg" alt="" width="88" height="88" loading="lazy"><span><span class="rotulo">Convivencia escolar</span><span class="titulo">Medidas disciplinarias respecto de estudiantes autistas</span><span class="linea">Un estudiante con TEA puede ser sancionado, pero solo con las medidas del reglamento y nunca por una desregulación.</span><span class="autoria">Bastián Vera Pardo</span></span></a></li>
+      <li><a href="ley-40-horas-colegios.html"><img src="../../assets/ilus_ley_40_horas_cuadro.jpg" alt="" width="88" height="88" loading="lazy"><span><span class="rotulo">Laboral</span><span class="titulo">Ley de 40 horas en colegios: a quién se aplica la rebaja</span><span class="linea">En los particulares pagados rige la rebaja; en los subvencionados se mantienen las 44 horas.</span><span class="autoria">Douglas Schawcroft Reyes</span></span></a></li>
+      <li><a href="pme-rendicion-sep.html"><img src="../../assets/ilus_pme_sep_cuadro.jpg" alt="" width="88" height="88" loading="lazy"><span><span class="rotulo">Subvenciones</span><span class="titulo">Un buen PME, una buena rendición SEP</span><span class="linea">Si la acción del plan es vaga, el gasto cuesta de rendir y arriesga ser rechazado.</span><span class="autoria">José Miguel Delpin Piffaut</span></span></a></li>
+      <li><a href="procedimiento-sancionatorio-superintendencia.html"><img src="../../assets/ilus_procedimiento_sie_cuadro.jpg" alt="" width="88" height="88" loading="lazy"><span><span class="rotulo">Fiscalización</span><span class="titulo">Cargos de la Superintendencia: el caso se juega antes de los descargos</span><span class="linea">Lo que quede en el acta de fiscalización será la base de los cargos, y los plazos son cortos.</span><span class="autoria">Andrés Pizarro Klein</span></span></a></li>
+    </ul>
+  </section>
+
+  <nav class="volver-publicaciones" aria-label="Volver">
+    <a class="boton-volver" href="https://publicaciones.delpinpizarro.cl/"><span aria-hidden="true">←</span> Volver a las publicaciones</a>
+  </nav>
+
+  <footer class="pie">
+    <p><b>Delpin Pizarro &amp; Cía.</b> · Estudio Jurídico · Badajoz 130, oficina 1103, Las Condes, Santiago · Tel. +56 2 2954 0314 · <a href="https://delpinpizarro.cl">delpinpizarro.cl</a></p>
+  </footer>
+
+</main>
+</body>
+</html>
